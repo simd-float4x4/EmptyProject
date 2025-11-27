@@ -1,1 +1,1 @@
-fix: 不要なMVC/MVVMファイルを削除してMultiple Commands Produceエラーを解消
+fix: Info.plistを削除し、AppDelegateでプログラム的にSceneDelegateを設定
