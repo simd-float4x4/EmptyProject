@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 /// Presenterプロトコル - ViewとInteractorを仲介する
 protocol PresenterProtocol: AnyObject, ObservableObject {

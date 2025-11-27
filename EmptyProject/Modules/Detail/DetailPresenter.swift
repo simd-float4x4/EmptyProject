@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 final class DetailPresenter: DetailPresenterProtocol, ObservableObject {
     weak var view: DetailViewProtocol?
