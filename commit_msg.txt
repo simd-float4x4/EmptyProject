@@ -1,1 +1,1 @@
-create: AppDelegate/SceneDelegateを追加してUIHostingController対応
+create: READMEを追加、カメラ権限設定を追加
