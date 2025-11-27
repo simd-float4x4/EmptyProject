@@ -1,1 +1,1 @@
-create: AppDelegate/SceneDelegateを追加してUIHostingController対応
+fix: import文の確認完了（すべて適切に設定済み）
