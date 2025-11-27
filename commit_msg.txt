@@ -1,1 +1,1 @@
-delete: Info.plistを削除（自動生成を使用）、import Combineを追加
+create: Info.plistを作成してDefault Configurationを明示的に定義
