@@ -29,6 +29,7 @@ final class CameraRouter: CameraRouterProtocol {
         let view = CameraView(presenter: presenter)
         let hostingController = CameraViewController(rootView: view)
         
+        hostingController.presenter = presenter
         presenter.view = hostingController
         router.viewController = hostingController
         

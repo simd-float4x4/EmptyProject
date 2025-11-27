@@ -1,1 +1,1 @@
-create: READMEを追加、カメラ権限設定を追加
+fix: ViewControllerにpresenterをセット、カメラ/ARセッションの自動開始を修正

@@ -27,6 +27,7 @@ final class PreviewRouter: PreviewRouterProtocol {
         let view = PreviewView(presenter: presenter)
         let hostingController = PreviewViewController(rootView: view)
         
+        hostingController.presenter = presenter
         presenter.view = hostingController
         router.viewController = hostingController
         

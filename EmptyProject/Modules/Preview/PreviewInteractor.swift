@@ -54,6 +54,9 @@ final class PreviewInteractor: PreviewInteractorInputProtocol {
                 session.commitConfiguration()
                 self.captureSession = session
                 
+                // セットアップ完了後に自動的にセッションを開始
+                session.startRunning()
+                
                 self.presenter?.didSetupCameraSession(session)
             } catch {
                 self.presenter?.didFailToSetupCamera(error)

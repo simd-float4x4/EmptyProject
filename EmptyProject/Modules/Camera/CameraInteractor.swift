@@ -40,7 +40,10 @@ final class CameraInteractor: NSObject, CameraInteractorInputProtocol {
         }
         
         self.configuration = config
-        presenter?.didUpdateARSessionState(.notStarted)
+        
+        // セットアップ完了後に自動的にセッションを開始
+        arSession.run(config, options: [.resetTracking, .removeExistingAnchors])
+        presenter?.didUpdateARSessionState(.running)
     }
     
     func startARSession() {
@@ -49,7 +52,8 @@ final class CameraInteractor: NSObject, CameraInteractorInputProtocol {
             return
         }
         
-        arSession.run(config, options: [.resetTracking, .removeExistingAnchors])
+        // セッションが実行中でなければ開始
+        arSession.run(config)
         presenter?.didUpdateARSessionState(.running)
     }
     
