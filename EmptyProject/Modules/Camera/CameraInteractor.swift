@@ -31,11 +31,13 @@ final class CameraInteractor: NSObject, CameraInteractorInputProtocol {
         
         let config = ARWorldTrackingConfiguration()
         config.planeDetection = [.horizontal, .vertical]
+        config.environmentTexturing = .automatic
         config.isLightEstimationEnabled = true
         
-        // 注意: 以下の機能は初期化を遅くするため、必要に応じて有効化
-        // config.environmentTexturing = .automatic  // 環境テクスチャリング
-        // config.frameSemantics.insert(.personSegmentationWithDepth)  // 人物セグメンテーション
+        // フレームセマンティクスの設定（iOS 14以降）
+        if ARWorldTrackingConfiguration.supportsFrameSemantics(.personSegmentationWithDepth) {
+            config.frameSemantics.insert(.personSegmentationWithDepth)
+        }
         
         self.configuration = config
         

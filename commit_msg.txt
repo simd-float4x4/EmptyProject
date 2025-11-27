@@ -1,1 +1,1 @@
-fix: ARKit初期化の高速化（重い機能をコメントアウト）
+fix: ViewControllerにpresenterをセット、カメラ/ARセッションの自動開始を修正
