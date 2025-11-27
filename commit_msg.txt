@@ -1,1 +1,1 @@
-create: Info.plistを作成してDefault Configurationを明示的に定義
+fix: Info.plistをプロジェクトルートに移動してMultiple Commands Produceエラーを解消
