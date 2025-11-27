@@ -1,1 +1,1 @@
-fix: Info.plistをプロジェクトルートに移動してMultiple Commands Produceエラーを解消
+fix: 不要なMVC/MVVMファイルを削除してMultiple Commands Produceエラーを解消
